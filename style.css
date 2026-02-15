@@ -1,0 +1,306 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  background: linear-gradient(180deg, #fce4ec, #e0f7fa);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  font-family: "Segoe UI", sans-serif;
+}
+
+
+.card {
+  background: white;
+  padding: 60px;
+  border-radius: 20px;
+  text-align: center;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+  z-index: 2;
+}
+
+h1 {
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+
+.question {
+  margin: 30px 0;
+  font-size: 1.6rem;
+}
+
+.actions button {
+  padding: 14px 28px;
+  border-radius: 30px;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  margin: 10px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+#yesBtn {
+  background: #87CEEB;
+  color: #2E2E2E;
+}
+
+#noBtn {
+  background: #f1f1f1;
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1.2s forwards;
+}
+
+.delay { animation-delay: 0.6s; }
+.delay-2 { animation-delay: 1.2s; }
+.delay-3 { animation-delay: 1.8s; }
+
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+
+/* FLOWERS */
+.flowers::before,
+.flowers::after {
+  content: "";
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background: url("https://i.imgur.com/6XK4F7E.png");
+  background-size: cover;
+  opacity: 0.15;
+  animation: float 12s infinite ease-in-out;
+}
+
+.flowers::after {
+  top: 70%;
+  left: 80%;
+  animation-delay: 6s;
+}
+
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-30px); }
+  100% { transform: translateY(0); }
+}
+
+#finalMessage {
+  margin-top: 30px;
+  font-size: 1.1rem;
+  color: #2E2E2E;
+}
+.side-quotes {
+  position: fixed;
+  right: 40px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 260px;
+  pointer-events: none;
+}
+
+.quote {
+  background: rgba(255, 255, 255, 0.85);
+  padding: 18px 22px;
+  border-radius: 16px;
+  font-size: 0.95rem;
+  color: #2E2E2E;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.1);
+  opacity: 0;
+  transform: translateX(30px);
+  position: absolute;
+  transition: all 1s ease;
+}
+
+.quote.active {
+  opacity: 1;
+  transform: translateX(0);
+}
+#noBtn {
+  background: #f1f1f1;
+  color: #777;
+  cursor: not-allowed;
+  transition: all 0.3s ease;
+}
+
+#noBtn:hover {
+  background: #e0e0e0;
+}
+
+#noBtn:hover i {
+  color: #999;
+}
+
+.hesitate-popup {
+  position: fixed;
+  right: 40px;
+  bottom: 40px;
+  max-width: 260px;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 18px 22px;
+  border-radius: 16px;
+  font-size: 0.95rem;
+  color: #2E2E2E;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s ease;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.hesitate-popup.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@keyframes floatFlowers {
+  0% { transform: translateX(-50%) translateY(0); opacity: 1; }
+  50% { transform: translateX(-50%) translateY(-40px); opacity: 0.7; }
+  100% { transform: translateX(-50%) translateY(0); opacity: 1; }
+}
+
+#flowerContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; /* so you can still click buttons */
+  overflow: hidden;
+  z-index: 0; /* behind the card */
+}
+
+/* individual flowers */
+.falling-flower {
+  position: absolute;
+  top: -50px; /* start above screen */
+  font-size: 1.2rem;
+  opacity: 0.8;
+  animation-name: fallFlower;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes fallFlower {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(110vh) rotate(360deg);
+    opacity: 0.5;
+  }
+}
+
+
+.actions button {
+  padding: 18px 28px;
+  font-size: 1.1rem;
+  border-radius: 30px;
+  margin: 10px 0;
+  width: 45%; /* mobile-friendly width */
+}
+
+@media (max-width: 480px) {
+  .actions button {
+    width: 80%;
+    font-size: 1.2rem;
+  }
+}
+
+body {
+  background: linear-gradient(180deg, #fce4ec, #e0f7fa);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  font-family: "Segoe UI", sans-serif;
+  overflow: hidden;
+}
+
+.card {
+  background: white;
+  padding: 40px 30px;
+  border-radius: 20px;
+  text-align: center;
+  width: 90%;
+  max-width: 450px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+  position: relative;
+  z-index: 2;
+}
+
+.actions button {
+  padding: 18px 28px;
+  border-radius: 30px;
+  border: none;
+  font-size: 1.1rem;
+  cursor: pointer;
+  margin: 10px 5px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  width: 45%;
+}
+
+@media (max-width: 480px) {
+  .actions button { width: 80%; font-size: 1.2rem; }
+}
+
+#yesBtn { background: #87CEEB; color: #2E2E2E; }
+#noBtn { background: #f1f1f1; color: #777; cursor: not-allowed; }
+
+.fade-in { opacity: 0; animation: fadeIn 1.2s forwards; }
+.delay { animation-delay: 0.6s; }
+.delay-2 { animation-delay: 1.2s; }
+.delay-3 { animation-delay: 1.8s; }
+
+@keyframes fadeIn { to { opacity:1; } }
+
+#finalMessage { margin-top: 20px; color: #2E2E2E; font-size: 1.2rem; text-align:center; }
+
+/* Flowers */
+#flowerContainer { position: fixed; top:0; left:0; width:100%; height:100%; pointer-events:none; overflow:hidden; z-index:0; }
+.falling-flower {
+  position: absolute;
+  top: -50px;
+  font-size: 1.2rem;
+  opacity: 0.8;
+  animation-name: fallFlower;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+@keyframes fallFlower {
+  0% { transform: translateY(0) rotate(0deg); opacity:0.8; }
+  100% { transform: translateY(110vh) rotate(360deg); opacity:0.5; }
+}
+
+.hesitate-popup {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  max-width: 260px;
+  background: rgba(255,255,255,0.9);
+  padding: 18px 22px;
+  border-radius: 16px;
+  font-size: 0.95rem;
+  color: #2E2E2E;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+  opacity:0;
+  transform: translateY(20px);
+  transition: all 0.6s ease;
+  pointer-events:none;
+  z-index:10;
+}
+.hesitate-popup.show { opacity:1; transform: translateY(0); }

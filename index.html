@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>For You</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+  <!-- Falling flowers background -->
+  <div id="flowerContainer"></div>
+
+  <!-- Main card -->
+  <main class="card">
+    <div id="formContent">
+      <h1 class="fade-in">I have something to ask you</h1>
+      <p class="fade-in delay">
+        I hope you’ll read this with the same sincerity I wrote it.
+      </p>
+
+      <h2 class="question fade-in delay-2">
+        Will you be my girlfriend?
+      </h2>
+
+      <div class="actions fade-in delay-3">
+        <button id="yesBtn">
+          <i data-lucide="heart"></i>
+          Yes
+        </button>
+
+        <button id="noBtn">
+          <i data-lucide="frown"></i>
+          No
+        </button>
+      </div>
+    </div>
+
+    <div id="finalMessage" class="fade-in"></div>
+  </main>
+
+  <div id="hesitatePopup" class="hesitate-popup">
+    Still not ready to answer?<br><br>
+    It’s okay to take your time.<br>
+    Just tell me honestly —<br>
+    I’ll understand.
+  </div>
+
+  <script src="script.js"></script>
+  <script>lucide.createIcons();</script>
+</body>
+</html>
