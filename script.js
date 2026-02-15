@@ -71,7 +71,7 @@ Thank you for trusting me and being amazing — this is just the beginning of ou
   typeMessage(typedDiv, message, 25);
 
 
- fetch("https://script.google.com/macros/s/AKfycbzbkafCjxVCSXTTYbAWT4FcFueUoNcS_b70uvrBIo53AbH73ToENLurTF-uG-TzTPim/exec", {
+ fetch("https://script.google.com/macros/s/AKfycbxchhHMIxq8m8NMVRjbeKJUxPWHav7hCzQJfPGziV03czJf5ckEK3LG97k2y9RlWBGv/exec", {
     method: "POST",
     body: JSON.stringify({ name: "Bob", answer: "yes" }),
   })
