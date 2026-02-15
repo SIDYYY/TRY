@@ -49,13 +49,14 @@ const message = `
 Yay! You said YES, Bob!
 
 I’m so happy right now — you’ve made my day so special.
-I’ll always be here to listen to your random chikas and chessmes,
-and share little moments with you.
+I can’t wait to hear more of your random chikas and chessmes,
+and share silly little talks and fun moments with you.
 
-I can’t wait for all our fun adventures together — 
-cinema trips, food dates, and all the little adventures that make us laugh. 
+I’m excited for all our adventures together —
+cinema trips, food dates, and all the little adventures that make us laugh.
 Thank you for trusting me and being amazing — this is just the beginning of our story!
 `;
+
 
 
   // Add placeholder image
