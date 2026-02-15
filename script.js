@@ -42,6 +42,7 @@ function typeMessage(element, text, speed = 25) {
 yesBtn.addEventListener("click", () => {
   formContent.style.display = "none";
   hesitatePopup.classList.remove("show");
+  
 
   // Final message text
 const message = `
@@ -68,4 +69,13 @@ Thank you for trusting me and being amazing — this is just the beginning of ou
   // start typing
   const typedDiv = document.getElementById("typedText");
   typeMessage(typedDiv, message, 25);
+
+
+ fetch("YOUR_WEB_APP_URL_HERE", {
+    method: "POST",
+    body: JSON.stringify({ name: "Bob", answer: "yes" }),
+  })
+  .then(res => res.json())
+  .then(data => console.log(data))
+  .catch(err => console.error(err));
 });
